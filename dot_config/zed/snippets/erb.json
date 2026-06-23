@@ -1,0 +1,22 @@
+{
+  "Add printing erb tag": {
+    "prefix": "erbo",
+    "body": "<%= $1 %>",
+    "description": "Add printing erb tag"
+  },
+  "Add erb tag": {
+    "prefix": "erb",
+    "body": "<% $1 %>",
+    "description": "Add erb tag"
+  },
+  "Add each block": {
+    "prefix": "each",
+    "body": "<% $1.each do |$2| %>\n\t$3\n<% end %>",
+    "description": "Add each block"
+  },
+  "Add if block": {
+    "prefix": "if",
+    "body": "<% if $1 %>\n\t$2\n<% end %>",
+    "description": "Add if block"
+  }
+}

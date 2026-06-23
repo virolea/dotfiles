@@ -43,14 +43,12 @@ brew "valkey"               # Redis-compatible store (cache / Sidekiq)
 brew "overmind"             # Procfile process manager
 brew "hivemind"             # lighter Procfile runner
 brew "ruby-build"           # ruby build definitions (used by mise)
-brew "mkcert"               # local trusted HTTPS certs
 
 # ---------------------------------------------------------------------------
 # Image / media processing (Active Storage variants)
 # ---------------------------------------------------------------------------
 brew "vips"                 # libvips — Rails 7+ default image processor
 brew "imagemagick"          # ImageMagick — if a project still needs MiniMagick
-brew "ghostscript"          # PDF/PS support for image processing
 brew "ffmpeg"               # video/audio (Active Storage previews)
 
 # ---------------------------------------------------------------------------
@@ -61,7 +59,7 @@ brew "pnpm"
 # ---------------------------------------------------------------------------
 # Deploy / cloud / services (review — some are job-specific)
 # ---------------------------------------------------------------------------
-brew "flyctl"               # Fly.io
+# brew "flyctl"               # Fly.io
 # brew "heroku/brew/heroku" # uncomment if you still deploy to Heroku
 # brew "awscli"             # AWS
 # brew "stripe/stripe-cli/stripe"
@@ -75,5 +73,4 @@ cask "aerospace"            # tiling window manager (.aerospace.toml)
 cask "font-iosevka"
 cask "1password-cli"
 cask "ngrok"
-cask "chromedriver"        # Rails system/feature tests
-# cask "gcloud-cli"         # uncomment if you need Google Cloud
+cask "chromedriver"
