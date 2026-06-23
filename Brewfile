@@ -70,6 +70,7 @@ brew "flyctl"               # Fly.io
 # Casks — apps & fonts
 # ---------------------------------------------------------------------------
 cask "ghostty"              # terminal
+cask "zed"                  # editor (dot_config/zed/*)
 cask "aerospace"            # tiling window manager (.aerospace.toml)
 cask "font-iosevka"
 cask "1password-cli"
