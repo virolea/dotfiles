@@ -1,0 +1,10 @@
+#!/bin/bash
+set -euo pipefail
+
+# oh-my-zsh — .zshrc sources it from $ZSH ($HOME/.oh-my-zsh)
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+  echo "==> Installing oh-my-zsh..."
+  # --unattended: don't change shell / don't launch zsh / don't touch .zshrc
+  RUNZSH=no KEEP_ZSHRC=yes sh -c \
+    "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+fi

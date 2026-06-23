@@ -1,0 +1,15 @@
+#!/bin/bash
+set -euo pipefail
+
+# Install the global runtimes declared in ~/.config/mise/config.toml (ruby, python...).
+# Re-runs whenever that config changes (hash below).
+# mise config hash: {{ include "dot_config/mise/config.toml" | sha256sum }}
+
+if [ -x /opt/homebrew/bin/brew ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+if command -v mise >/dev/null 2>&1; then
+  echo "==> Installing global runtimes with mise..."
+  mise install
+fi

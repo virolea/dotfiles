@@ -1,0 +1,9 @@
+[settings]
+idiomatic_version_file_enable_tools = []
+
+[settings.ruby]
+compile = false
+
+[tools]
+python = "3.11"
+ruby = "4.0.4"

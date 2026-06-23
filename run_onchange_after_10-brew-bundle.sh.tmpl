@@ -1,0 +1,14 @@
+#!/bin/bash
+set -euo pipefail
+
+{{ if eq .chezmoi.os "darwin" -}}
+# Re-runs automatically whenever the Brewfile changes (hash below).
+# Brewfile hash: {{ include "Brewfile" | sha256sum }}
+
+if [ -x /opt/homebrew/bin/brew ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+echo "==> Installing packages from Brewfile..."
+brew bundle --file="{{ .chezmoi.sourceDir }}/Brewfile"
+{{ end -}}

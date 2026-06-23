@@ -1,0 +1,32 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Vincent Rolea
+	email = 3525369+virolea@users.noreply.github.com
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[alias]
+  co = checkout
+  wip = commit -m "WIP [ci skip]"
+  oops = commit --amend --no-edit
+  l = log --oneline --graph --all
+
+  # Get default branch name (copied from https://stackoverflow.com/a/67672350/14870317)
+  defaultBranch = !git symbolic-ref refs/remotes/origin/HEAD | cut -d'/' -f4
+
+  # Clean merged branches (adapted from https://stackoverflow.com/a/6127884/14870317)
+  sweep = !git branch --merged $(git defaultBranch) | grep -E -v " $(git defaultBranch)$" | xargs -r git branch -d && git remote prune origin
+
+[branch]
+	sort = -committerdate
+[push]
+	autoSetupRemote = true
+[core]
+	editor = nvim
+	excludesFile = idea/
+
+[diff]
+    external = difft
