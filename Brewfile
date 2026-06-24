@@ -69,7 +69,11 @@ brew "pnpm"
 # ---------------------------------------------------------------------------
 cask "ghostty"              # terminal
 cask "zed"                  # editor (dot_config/zed/*)
+cask "raycast"              # Spotlight replacement / launcher
+cask "rectangle"            # window management (keyboard shortcuts)
 cask "aerospace"            # tiling window manager (.aerospace.toml)
+cask "orbstack"             # Docker / Linux VMs (Docker Desktop replacement)
+cask "slack"
 cask "font-iosevka"
 cask "1password-cli"
 cask "ngrok"

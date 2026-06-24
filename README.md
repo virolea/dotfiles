@@ -51,6 +51,23 @@ These hold secrets or are account-specific and are intentionally **not** tracked
 - Start Postgres: `brew services start postgresql@18`
 - Sign in to 1Password CLI: `op signin`
 
+App permissions / setup that macOS won't let a script do (TCC-protected):
+
+- **Raycast**: launch it, grant Accessibility, set its hotkey to `⌘Space`, then
+  disable the Spotlight shortcut (System Settings → Keyboard → Keyboard Shortcuts
+  → Spotlight) so Raycast takes over.
+- **Rectangle**: launch it and grant Accessibility. (Note: you also have AeroSpace —
+  pick whichever you want running; both are window managers.)
+- **OrbStack**: launch once to start its Docker engine; it replaces Docker Desktop.
+- **Slack**: sign in.
+
+macOS system tweaks (applied automatically by `run_onchange_after_40-macos-defaults`):
+
+- Caps Lock → Escape (persists via `~/Library/LaunchAgents/com.local.caps-to-esc.plist`)
+- Two-finger tap = right click
+
+  A logout/login may be needed for the trackpad change to fully register.
+
 ## Day-to-day
 
 ```sh
