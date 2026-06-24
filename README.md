@@ -12,7 +12,7 @@ Personal macOS dotfiles for Ruby on Rails development, managed with
 | Git         | `dot_gitconfig`, `dot_config/git/ignore` |
 | Editors     | `dot_config/zed/*`, `dot_config/nvim/*` (LazyVim) |
 | Terminal    | `dot_config/ghostty/config` |
-| Window mgr  | `dot_aerospace.toml` (AeroSpace) |
+| Window mgr  | Rectangle (configured in-app) |
 | Runtimes    | `dot_config/mise/config.toml` (ruby, python via mise) |
 | Packages    | `Brewfile` |
 
@@ -63,8 +63,7 @@ App permissions / setup that macOS won't let a script do (TCC-protected):
 - **Raycast**: launch it, grant Accessibility, set its hotkey to `⌘Space`, then
   disable the Spotlight shortcut (System Settings → Keyboard → Keyboard Shortcuts
   → Spotlight) so Raycast takes over.
-- **Rectangle**: launch it and grant Accessibility. (Note: you also have AeroSpace —
-  pick whichever you want running; both are window managers.)
+- **Rectangle**: launch it and grant Accessibility.
 - **OrbStack**: launch once to start its Docker engine; it replaces Docker Desktop.
 - **Slack**: sign in.
 

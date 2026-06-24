@@ -6,7 +6,6 @@
 # Taps
 # ---------------------------------------------------------------------------
 tap "homebrew/services"
-tap "nikitabobko/tap"        # aerospace window manager
 
 # ---------------------------------------------------------------------------
 # Core CLI / dev tooling
@@ -71,7 +70,6 @@ cask "ghostty"              # terminal
 cask "zed"                  # editor (dot_config/zed/*)
 cask "raycast"              # Spotlight replacement / launcher
 cask "rectangle"            # window management (keyboard shortcuts)
-cask "aerospace"            # tiling window manager (.aerospace.toml)
 cask "orbstack"             # Docker / Linux VMs (Docker Desktop replacement)
 cask "slack"
 cask "font-iosevka"
