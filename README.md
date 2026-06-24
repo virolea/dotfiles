@@ -25,16 +25,23 @@ The `run_*` scripts are executed by chezmoi during `apply`:
 
 ## Bootstrapping a brand-new Mac
 
+> ⚠️ Run everything below as your **normal user** — never with `sudo`.
+> Homebrew refuses to install as root. Your account must be an **administrator**
+> (Homebrew needs sudo to create `/opt/homebrew`).
+
 ```sh
 # 1. Xcode Command Line Tools (git, compilers). Wait for the GUI installer to finish.
 xcode-select --install
 
-# 2. Install chezmoi, pull this repo, and apply everything in one command.
+# 2. Cache sudo credentials (enter your password once). Also confirms you're an admin.
+sudo -v
+
+# 3. Install chezmoi, pull this repo, and apply everything in one command.
 #    This installs Homebrew, all Brewfile packages, oh-my-zsh, runtimes, and
 #    drops every dotfile into place.
 sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply virolea
 
-# 3. Restart the shell (or open a new terminal tab).
+# 4. Restart the shell (or open a new terminal tab).
 exec zsh
 ```
 

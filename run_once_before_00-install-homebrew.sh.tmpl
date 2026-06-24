@@ -4,6 +4,11 @@ set -euo pipefail
 {{ if eq .chezmoi.os "darwin" -}}
 if ! command -v brew >/dev/null 2>&1; then
   echo "==> Installing Homebrew..."
+  # Homebrew needs sudo to set up /opt/homebrew. Pre-cache credentials so the
+  # (non-interactive) installer's sudo check passes. This prompts for your
+  # password once and confirms the account is an administrator.
+  echo "    (enter your macOS password if prompted — must be an admin user)"
+  sudo -v
   NONINTERACTIVE=1 /bin/bash -c \
     "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
