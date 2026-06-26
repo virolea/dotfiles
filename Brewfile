@@ -65,6 +65,7 @@ cask "ghostty"              # terminal
 cask "zed"                  # editor (dot_config/zed/*)
 cask "raycast"              # Spotlight replacement / launcher
 cask "rectangle"            # window management (keyboard shortcuts)
+cask "betterdisplay"        # display management (resolution, scaling, dummy displays)
 cask "orbstack"             # Docker / Linux VMs (Docker Desktop replacement)
 cask "slack"
 cask "font-iosevka"
